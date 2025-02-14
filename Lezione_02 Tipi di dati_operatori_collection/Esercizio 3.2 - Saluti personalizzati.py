@@ -5,7 +5,7 @@ nomi: list= ["Juan", "Mary", "Andrew", "Diego", "Tatiana", "Paulina"]
 messaggio: str= ("Sei invitat@ alla festa di Natale")
 
 for persone in nomi:
-    print(persone + "Sei invitato alla festa di Natale")
+    print(persone + ": " + "Sei invitato alla festa di Natale")
 
 # print(nomi[0] + ": " + messaggio)
 
