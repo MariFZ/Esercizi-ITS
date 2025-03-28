@@ -1,0 +1,19 @@
+a: list = [1,2,3]
+b: list = [4,5,6]
+
+a.append(b)
+print(a)
+print(a[3][0]) # da risultato 4
+
+a: list = [1,2,3]
+
+
+a.append(b)
+'''print(a[0][0]) # i numeri interi non sono indicizzati'''
+
+a.append(b)
+print(a[3][0])
+
+m: list = {"Ciao", 88955,1,0, "Ciao"}
+print(m)
+
