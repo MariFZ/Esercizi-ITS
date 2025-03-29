@@ -19,3 +19,15 @@ while True:
         else:
             print(f"La prima e l'ultima lettera della parola: \"{word}\" non sono le stesse")
 
+# Attenzione! 
+# Un numero/parola palindroma è quella che si scrive uguale "al derecho y al reves"
+# roma / amor
+# Questo esercizio è diverso quello fatto per il compito, dove si cercava se una parola aveva
+# la prima e l'ultima lettera uguali
+
+'''
+Quando usare word[0] == word[-1] e quando stringa == stringa[::-1]?
+✔ Usa word[0] == word[-1] quando vuoi controllare solo il primo e ultimo carattere di una parola.
+✔ Usa stringa == stringa[::-1] quando vuoi verificare se tutta la parola o numero è palindromo.
+
+'''
