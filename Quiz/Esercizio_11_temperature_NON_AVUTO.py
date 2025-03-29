@@ -9,44 +9,51 @@
 
 from typing import Optional
 
-# def convert_temperature(temperature:float, to_celsius: Optional[bool] = None) ->float:
+def convert_temperature(temperature:float, to_celsius: Optional[bool] = None) ->float:
+
     
-#     if to_celsius: 
-#         '''Quando si scrive: if to...., Python l'interpreta come True'''
-#         # converte da Fahrenheit a Celsius
-#         return (temperature -32) * 5/9
+    if to_celsius: 
+        '''Quando si scrive: if to...., Python l'interpreta come True'''
+        # converte da Fahrenheit a Celsius
+        return (temperature -32) * 5/9
     
-#     else:
-#         # converte da Celsius a Fahrenheit
-#         return (temperature* 9/5) +32
-
-# fahrenheit = 100
-# celsius = 37.5
-
-# print(convert_temperature(fahrenheit, celsius))
-
-
-# seconda possibilità partendo da to_celsius come
-
-def convert_temperature(temperatura:float, to_celsius: Optional[bool] = None) -> float:
-
-    fahrenheit:float = 0,0
-    celsius:float = 0,0
-
-    if to_celsius is None or not to_celsius:
-        # converte da celsius a Fahrenheit
-
-        fahrenheit:float = (temperatura* 9/5) +32
-
+    elif not to_celsius:
+        return (temperature* 9/5) +32
+    
     else:
-        celsius:float = (temperatura -32) * 5/9
-
-    return fahrenheit, celsius
-
+        return (fahrenheit, to_celsius)
 
 fahrenheit = 100
-# celsius = 37.5
-print(convert_temperature(fahrenheit))
+celsius = 37.5
+
+print(f"Questo è il valore di F: {convert_temperature(fahrenheit):.2f}")
+      
+
+print(f"Questo è il valore di C: {convert_temperature(celsius):.2f}")
+print(f"Questo è il valore di tutte e due: 'Fare'{convert_temperature(fahrenheit):.2f} e Cels: {convert_temperature(celsius)}")
+
+
+# # seconda possibilità partendo da to_celsius come
+
+# def convert_temperature(temperatura:float, to_celsius: Optional[bool] = None) -> float:
+
+#     fahrenheit:float = 0,0
+#     celsius:float = 0,0
+
+#     if to_celsius is None or not to_celsius:
+#         # converte da celsius a Fahrenheit
+
+#         fahrenheit:float = (temperatura* 9/5) +32
+
+#     else:
+#         celsius:float = (temperatura -32) * 5/9
+
+#     return fahrenheit, celsius
+
+
+# fahrenheit = 100
+# # celsius = 37.5
+# print(convert_temperature(fahrenheit))
 
 
 
