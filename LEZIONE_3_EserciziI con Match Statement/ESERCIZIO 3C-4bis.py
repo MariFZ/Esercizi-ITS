@@ -11,7 +11,7 @@ login_utente["ruolo"] = ruolo_utente
 
 # INSERISCO LA CHIAVE/VALORE ETA E LA CONVERTO IN INTERO
 try:
-    eta_utente: int = int(input("Inserisci la tua età: "))  # 🔥 CONVERSIONE DIRETTA
+    eta_utente: int = int(input("Inserisci la tua età: "))  
     login_utente["eta"] = eta_utente
 except ValueError:
     print("Errore! Devi inserire un numero intero per l'età.")

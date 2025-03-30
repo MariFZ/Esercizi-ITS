@@ -46,5 +46,6 @@ match oggetti:
     
     case _:
         "Categoria sconosciuta"
+        print("Categoria sconoscita")
 
 
