@@ -14,7 +14,6 @@
 def paninodoc(*elementi): # con * posso scrivere quanti elementi voglio!
     """Funzione che stampa la composizione di un panino con gli ingredienti scelti"""
 
-
     # Faccio un print per indicare che l'ordine sta iniziando. 
     # Con \n do un spazio, per il secondo print"""
     
