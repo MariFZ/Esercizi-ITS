@@ -17,6 +17,8 @@ def maggiori_di(lista: list[int], maggiore: int) -> tuple[list[int], int]:
 lista_numeri: list[int] = [10,34,5,6,78,12,33,4,1]
 numero_maggiore: int = 34
 
-print(f"Questa è la lista dei numeri maggiori di {numero_maggiore} della lista fornita: {maggiori_di(lista_numeri, numero_maggiore)}")
+print(maggiori_di(lista_numeri,numero_maggiore))
+
+# print(f"Questa è la lista dei numeri maggiori di {numero_maggiore} della lista fornita: {maggiori_di(lista_numeri, numero_maggiore)}")
 
 

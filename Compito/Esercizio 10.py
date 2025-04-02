@@ -88,13 +88,13 @@ numeri_frequenti:list = []
 for numero, frequenza in frequenze.items():
     '''for chiave, valore in dizionario.items()'''
     if frequenza == massima_freq:
-        '''se la frequenza che ai trovato è uguale alla massima frequeza, 
+        '''se la frequenza che ai trovato è uguale alla massima frequenza, 
             aggiungela alla lista: "numeri_frequenti'''
         numeri_frequenti.append(numero)
 
         
 
-print(f"La lista dei numeri è {list_numeri}, la somma dei numeri pari è: {somma_pari}, la somma dei numeri dispari: {somma_dispari} la media dei numeri dispari è: {(somma_dispari/media)} e la massima frequenza di numeri: {numeri_frequenti} {massima_freq} volte")
+print(f"La lista dei numeri è {list_numeri}, la somma dei numeri pari è: {somma_pari}, la somma dei numeri dispari: {somma_dispari} la media dei numeri dispari è: {(somma_dispari/contatore_numeri_dispari)} e la massima frequenza di numeri: {numeri_frequenti} {massima_freq} volte")
 
 
 # soluzione senza la frequenza fatta abbastamza bene, ma non ho creato un dizionario

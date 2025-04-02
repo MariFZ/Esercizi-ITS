@@ -25,12 +25,6 @@ def set_name(self, nome):
 
     self.nome = nome
 
-       
-
-
-
-
-
 
 class Dipendente(Persona): 
     
