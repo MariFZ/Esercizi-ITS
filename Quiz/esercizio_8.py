@@ -43,7 +43,7 @@ def count_isolated(lista: list[int]) -> int:
             '''Qui sto dichiarando che il valore di i è uguale a 0'''
            
 
-            if list[i] != list[i + 1]:
+            if lista[i] != lista[i + 1]:
                 '''se il numero all'indice 0 è diverso al numero nell'indice 0 +1,
                     aggiungelo al contatore'''
                 contatore_isolati += 1

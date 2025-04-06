@@ -7,7 +7,8 @@
 # After calling the function, print both of your lists to make sure the messages were moved correctly
 
 # Iniziare con una copia del programma dell'Esercizio 8-9. 
-# Scrivete una funzione chiamata send_messages() che stampa ogni messaggio di testo e sposta ogni messaggio in un nuovo elenco chiamato sent_messages man mano che viene stampato. 
+# Scrivete una funzione chiamata send_messages() che stampa ogni messaggio di testo e sposta ogni messaggio in un nuovo elenco chiamato 
+# sent_messages man mano che viene stampato. 
 # Dopo aver richiamato la funzione, stampate entrambi gli elenchi per verificare che i messaggi siano stati spostati correttamente.
 
 

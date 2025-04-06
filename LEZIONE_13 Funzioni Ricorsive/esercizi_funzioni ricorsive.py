@@ -202,15 +202,61 @@
 # con 1! uguale a 1 e 0! definito come 1.
 # Si scriva una funzione ricorsiva recursiveFactorial che dato un numero n calcoli n!.
 
-def recursiveFatorial(n:int) ->int:
+# def recursiveFatorial(n:int) ->int:
 
-    if n ==0:
-        return 1
-    return n * recursiveFatorial(n -1)
+#     if n ==0:
+#         return 1
+#     return n * recursiveFatorial(n -1)
 
-print(recursiveFatorial(5))
+# print(recursiveFatorial(5))
+
+# Esercizio 4
+
+# Scrivere una funzione ricorsiva recursiveDigitCounter che restituisca il numero di cifre di un numero intero n passato in input.
+# Sono permessi sia valori positivi che negativi per n.
+# Ad esempio, il numero -120 ha 3 cifre.
+# Non si tenga conto di eventuali zeri non significativi.
+
+# Suggerimento: per il calcolo delle cifre, fare un controllo se il valore assoluto di n sia minore di 10. 
+# In caso positivo, significa che il numero n ha una sola cifra. In caso negativo, significa che il numero n ha più cifre; 
+# dunque, dividere n per 10 per rimuovere l'ultima cifra e richiama ricorsivamente la funzione, 
+# fino a ottenere un numero con una sola cifra.
+
+def recursiveDigiCount(n:int) -> int:
+
+    if n < 10:
+        # print (f"Il numero {n} ha una sola cifra")
+        return  1
+        
+    elif n > 10:
+        return 1 + (recursiveDigiCount(n//10))
+    '''cosa ha fatto? ...dopo il secondo controllo giachè più grande di 10, quindi ha come minimo 1 
+    digito, mi serve per fare la somma in avanti....
+    DA RIFARE '''
+
+print(recursiveDigiCount(12300)) 
 
 
+# Esercizio 5.
+
+# Una progressione armonica è definita come il prodotto dei reciproci dei primi n numeri interi positivi, 
+# ovvero il risultato della moltiplicazione di 1 diviso ogni numero intero da 1 fino a n.
+# Ad esempio, se n = 6, la progressione armonica A vale:
+# A = 1/6 * 1/5 * 1/4 * 1/3 * 1/2 * 1 = 0.001389.
+
+# Scrivere in Python una funzione ricorsiva chiamata armonica che dato un numero n intero positivo, 
+# calcoli la relativa progressione armonica, arrotondando il risultato finale a 6 cifre decimal
+
+def armonica(n:int) ->float:
+
+    if n < 0:
+        return print("Errore")
+    
+    elif n == 0:
+        return 0
+    
+    else:
+        return 1  * armonica (1/n - 1)
 
 
 
