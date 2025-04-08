@@ -27,7 +27,8 @@ class Persona:
 
     def setAge(self, age: int) -> None:
         if age < 0 or age > 150:
-            self.age = age
+               print("Eta non permessa")
+               self.age = age
         else:
             self.age = age 
 
@@ -56,7 +57,7 @@ m.setLastname("Figueroa")
 # impostare l'eta
 m.setAge(-29)
 
-m.setAge(29)
+# m.setAge(29)
 
 m.displayData()
 print("-----------------------")

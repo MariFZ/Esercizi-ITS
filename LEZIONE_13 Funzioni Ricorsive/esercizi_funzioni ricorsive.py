@@ -1,3 +1,14 @@
+# Spiegazione
+
+'''Prima di eseguire la funzione ricorsiva, devo definire:
+
+1. Criteri di arresto: per capire dove si deve fermare, 
+    sino faccio una funzione infinita che va sotto zero
+2. La parte ricorsiva'''
+
+
+
+
 # funzione countdown
 
 '''ciclo while'''
@@ -182,14 +193,37 @@
 # Se m è la somma depositata sul conto, la somma disponibile alla fine del mese sarà 1.005 volte m.
 # Scrivere una funzione ricorsiva compoundInterest che calcoli la somma presente sul conto dopo t mesi data una somma di partenza m.
 
+'''
+ci(1000,3)
+1.005 * cI(1000,2)
+1.005 * cI(1000,1)
+1.005 * cI(1000,0)
+'''
+
+
+
+
+
+
+
+
+
 # def compundInterest(m:float, t:float) -> float:
 #     '''m è il valore iniziale sul conto. '''
     
-#     if t == 0:
+#     if m < 0.00:
+#         print("Non è possibile fare il calcolo di un conto negativo")
+
+#     if t == 0.00:
 #         return m
 
 #     else:
-#         return 1005 * compundInterest(m, t - 1) # il calcolo si fa: saldo = m * t(1005)
+
+#         if t <=0:
+#             return round(m, 2) #  la ricorsione si ferma qui. Mi restituisce m 
+        
+#         else:
+#             return round(1.0005 * compundInterest(m, t - 1),2) # il calcolo si fa: saldo = m * t(1005)
 
 # print(compundInterest(100, 3))
 
@@ -225,7 +259,7 @@
 # def recursiveDigiCount(n:int) -> int:
 
 #     if n < 10:
-#         # print (f"Il numero {n} ha una sola cifra")
+#   
 #         return  1
         
 #     elif n > 10:
@@ -306,7 +340,7 @@
 
 # print(produttoriaPi3(5))
 
-# Esercio 8
+# Esercizio 8
 
 # Si scriva una funzione ricorsiva vowelsCounter che conti il numero di vocali in una stringa.
 
@@ -318,22 +352,16 @@
 
 #     # maria
 
-#     if len(stringa) == 0:
+#     if len(stringa) == 0: # potevo anche scrivere: 
+#     # if not stringa: 
 #         return 0
     
-#     else:
-#         vocali = ["a", "e", "i", "o", "u"]
-#         lettera = stringa[0]
+#     if stringa[0].lower in ["a", "e", "i", "o", "u"]:
+#         return 1 + vowelsCounter(stringa[1:])  
+
+#     else: 
+#         return 0 + vowelsCounter(stringa[1:])
     
-#         if lettera in vocali:
-
-#             return 1 + vowelsCounter(stringa[1:])
-        
-#         else:
-#             return vowelsCounter(stringa[1:])
-
-
-
 # def vowelsCounter(stringa:str) ->int:
 
 #     # maria
@@ -344,18 +372,11 @@
 #     else:
 #         vocali = ["a", "e", "i", "o", "u"]
        
-
 #         if stringa[0] in vocali:
 #            return 1 + vowelsCounter(stringa[1:])
         
 #         else:
 #             return vowelsCounter(stringa[1:])
-
-
-
-
-
-
             
 # print(vowelsCounter("maria"))
 
@@ -373,13 +394,69 @@
 # print(vocali("maria"))
 
     
+# lista = ['a', 'b', 'c', 'd']
+# for i in range(len(lista)):  # range(len(lista)) genera i numeri da 0 a 3
+#     print(lista[i])  # Accediamo agli elementi tramite l'indice
 
-lista = ['a', 'b', 'c', 'd']
-for i in range(len(lista)):  # range(len(lista)) genera i numeri da 0 a 3
-    print(lista[i])  # Accediamo agli elementi tramite l'indice
+# for i in lista:
+#     print(i)
 
-for i in lista:
-    print(i)
+# Esercizio 9.
+
+# Si scriva una funzione ricorsiva vowelRemover che elimini tutte le vocali da una stringa data e
+#  restituisca sotto forma di una nuova stringa la stringa originale ma senza le vocali.
+
+# Suggerimento: utilizzare l'operatore + per realizzare la concatenazione di stringhe al fine di costruire la stringa da restituire.
+
+# Mio pensiero:
+'''tengo que eliminar todas las vocales de una frase
+e DAR otra frase sin las vocales
+por ejemplo: 
+
+si me dan = Maria la nueva frase deve de ser: Mr
+Me proponen de usar la suma de las consonantes
+'''
+
+# def vowelRemover(stringa:str) -> str:
+
+#     if not stringa: # se la stringa è vuota
+#         return ""
+    
+#     else:
+        
+#         if stringa[0] in ["a","e", "i", "o", "u"]:
+#             return vowelRemover(stringa[1:])
+        
+#         else:
+#             return stringa[0] + vowelRemover(stringa[1:])
+
+# print(vowelRemover("maria"))
+
+# Esercizio 10.
+
+# Si scriva una funzione ricorsiva charDuplicator che consenta di duplicare ogni carattere in una stringa 
+# e restituisca il risultato sotto forma di una nuova stringa.
+
+# Ad esempio, se la stringa "libro" viene data in input a charDuplicator, 
+# la funzione ricorsiva deve produrre in output la stringa "lliibbrroo".
+
+# def charDuplicator(stringa:str) -> str:
+
+    
+#     if len(stringa) == 0:
+#         return ""
+       
+#     else:
+#       return stringa[0] *2 + charDuplicator(stringa[1:])
+    
+# print(charDuplicator("libro"))
+
+    
+
+    
+
+
+
 
 
 
