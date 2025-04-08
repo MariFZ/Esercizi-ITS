@@ -22,8 +22,8 @@
 #     else:
 #         print("Errore! Devi scrivere un numero positivo")
 
-# countdown(-5)
-# # print(countdown(5))
+# countdown(5)
+# print(countdown(5))
 # '''non devo fare print perchè la funzione non ha un return e quindi mi stampa None'''
 
 
@@ -222,19 +222,20 @@
 # dunque, dividere n per 10 per rimuovere l'ultima cifra e richiama ricorsivamente la funzione, 
 # fino a ottenere un numero con una sola cifra.
 
-def recursiveDigiCount(n:int) -> int:
+# def recursiveDigiCount(n:int) -> int:
 
-    if n < 10:
-        # print (f"Il numero {n} ha una sola cifra")
-        return  1
+#     if n < 10:
+#         # print (f"Il numero {n} ha una sola cifra")
+#         return  1
         
-    elif n > 10:
-        return 1 + (recursiveDigiCount(n//10))
-    '''cosa ha fatto? ...dopo il secondo controllo giachè più grande di 10, quindi ha come minimo 1 
-    digito, mi serve per fare la somma in avanti....
-    DA RIFARE '''
+#     elif n > 10:
+#         return 1 + (recursiveDigiCount(n//10))
 
-print(recursiveDigiCount(12300)) 
+#     '''cosa ha fatto? ...dopo il secondo controllo giachè più grande di 10, quindi ha come minimo 1 
+#     digito, mi serve per fare la somma in avanti....
+#     DA RIFARE '''
+
+# print(recursiveDigiCount(12300)) 
 
 
 # Esercizio 5.
@@ -247,19 +248,138 @@ print(recursiveDigiCount(12300))
 # Scrivere in Python una funzione ricorsiva chiamata armonica che dato un numero n intero positivo, 
 # calcoli la relativa progressione armonica, arrotondando il risultato finale a 6 cifre decimal
 
-def armonica(n:int) ->float:
+# def armonica(n:int) ->float:
 
-    if n < 0:
-        return print("Errore")
+#     if n ==1:
+#         return 1
     
-    elif n == 0:
-        return 0
     
-    else:
-        return 1  * armonica (1/n - 1)
+#     else:
+#         return 1/n  * armonica(n - 1)
+
+# def calcolaarmonica(n:int) -> float:
+
+#     return round(armonica(n),6)
+
+
+# print(calcolaarmonica(6))
+
+# Esercizio 6
+
+# Una produttoria è definita come il prodotto di un certo numero n di fattori, con n intero positivo. Sia Pi una produttoria definita come segue:
+# Pi = (0 + 2) * (1 + 2) * (2 + 2) * ... * (n + 2).  
+
+# Calcolare il valore della produttoria Pi se n = 7
+
+
+# def produttoria(n:int) -> int:
+
+#     # caso base: se n è 0, la produttoria è 1, perchè una produttoria vuota è per definizione
+#     if n == 0:
+#         return 1
+    
+#     else:
+#         # passo ricorsivo: moltiplichiamo (n+2) con la produttoria di n -1
+#        return (n + 2) * produttoria(n - 1)
+
+
+# n = 7
+
+# print(produttoria(n))
+
+# Esercizio 7
+
+# Una produttoria è definita come il prodotto di un certo numero n di fattori, con n intero positivo. Sia Pi3 una produttoria definita come segue:
+# Pi3 = (1**3) * (2**3) * (3**3) * ... * (n**3)  
+
+# Calcolare il valore della produttoria Pi3 se n = 5.
+
+# def produttoriaPi3(n:int) ->float:
+
+#     if n==1:
+#         return 1
+
+#     else:
+#         return (n**3) * produttoriaPi3(n -1) 
+    
+# n = 5
+
+# print(produttoriaPi3(5))
+
+# Esercio 8
+
+# Si scriva una funzione ricorsiva vowelsCounter che conti il numero di vocali in una stringa.
+
+# Suggerimento: ogni volta che si effettua una chiamata ricorsiva, si utilizzi lo slicing per ottenere una nuova stringa formata dai caratteri compresi 
+# tra il secondo e l'ultimo della stringa originale.
+# L'ultima chiamata ricorsiva avverrà quando la stringa non contiene caratteri.
+
+# def vowelsCounter(stringa:str) ->int:
+
+#     # maria
+
+#     if len(stringa) == 0:
+#         return 0
+    
+#     else:
+#         vocali = ["a", "e", "i", "o", "u"]
+#         lettera = stringa[0]
+    
+#         if lettera in vocali:
+
+#             return 1 + vowelsCounter(stringa[1:])
+        
+#         else:
+#             return vowelsCounter(stringa[1:])
 
 
 
+# def vowelsCounter(stringa:str) ->int:
+
+#     # maria
+
+#     if len(stringa) == 0:
+#         return 0
+    
+#     else:
+#         vocali = ["a", "e", "i", "o", "u"]
+       
+
+#         if stringa[0] in vocali:
+#            return 1 + vowelsCounter(stringa[1:])
+        
+#         else:
+#             return vowelsCounter(stringa[1:])
+
+
+
+
+
+
+            
+# print(vowelsCounter("maria"))
+
+# def vocali(stringa: str):
+
+#     vocali = ["a", "e", "i", "o", "u"]
+#     cont = 0
+
+#     for lettera in stringa:
+#         if lettera in vocali:
+#             cont += 1
+    
+#     return cont
+
+# print(vocali("maria"))
+
+    
+
+lista = ['a', 'b', 'c', 'd']
+for i in range(len(lista)):  # range(len(lista)) genera i numeri da 0 a 3
+    print(lista[i])  # Accediamo agli elementi tramite l'indice
+
+for i in lista:
+    print(i)
 
 
 

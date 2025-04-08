@@ -2,8 +2,6 @@
 
 # ogni carta ha un valore tra 2 e 11 compresso
 
-
-
 # asso = puo valere 1 o 11
 
 # 11 deve avere 1
@@ -52,9 +50,6 @@ print(blackjack_hand_total([1, 10, 11]))
 #     n =len(nums)
 
 #     lista_mancante = []
-
-#     new_list = nums.copy()
-    
 
 #     for numero in range (1, n +1):
 #         if numero not in new_list:

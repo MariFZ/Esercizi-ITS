@@ -2,6 +2,29 @@
 
 # Scrivi una funzione che riceve un numero e stampa un conto alla rovescia da quel numero a zero
 
+def countdown(n: int) -> int:
+
+        for i in range(n, -1 , -1):
+                print (i)
+                
+countdown(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def countdown(n: int) -> int:
 #     '''soluzione col ciclo while
 #     Cosa dice:
@@ -85,14 +108,14 @@
 #     print(numero)
 # print("Iniziamo!!!")
 
-while True:
+# while True:
 
-    line = input('> ') # Questo chiede all'utente di inserire una linea/frase: stringa
-    if line == 'done':
-        break
+#     line = input('> ') # Questo chiede all'utente di inserire una linea/frase: stringa
+#     if line == 'done':
+#         break
 
-print(line)
-print('Done!')
+# print(line)
+# print('Done!')
 
 
 

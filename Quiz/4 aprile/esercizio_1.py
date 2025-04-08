@@ -11,33 +11,68 @@
 #print(blackjack_hand_total([1, 10, 11]))
 
 
-
 def blackjack_hand_total(card: list[int]) -> int:
-    somma = 0
-    assi = 0
     
-    for i in card:
-        if i == 1:  # Se l'elemento è un asso, incrementiamo il contatore
-            assi += 1
-        elif i > 10:  # Se l'elemento è una figura (J, Q, K), aggiungiamo 10
-            somma += 10
-        else:
-            somma += i  # Somma tutte le altre carte normalmente
-
-    # Tratta gli assi come 11 finché non supera 21
-    for _ in range(assi):
-        if somma + 11 <= 21:
-            somma += 11  # L'asso viene trattato come 11
-        else:
-            somma += 1  # Se la somma supera 21, trattiamo l'asso come 1
-
+    somma = sum(card)
+  
+    if somma > 21:
+        somma -=10
+      
     return somma
+
+        
+print(blackjack_hand_total([1, 10, 11]))
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def blackjack_hand_total(card: list[int]) -> int:
+#     somma = 0
+#     assi = 0
+    
+#     for i in card:
+#         if i == 1:  # Se l'elemento è un asso, incrementiamo il contatore
+#             assi += 1
+#         elif i > 10:  # Se l'elemento è una figura (J, Q, K), aggiungiamo 10
+#             somma += 10
+#         else:
+#             somma += i  # Somma tutte le altre carte normalmente
+
+#     # Tratta gli assi come 11 finché non supera 21
+#     for _ in range(assi):
+#         if somma + 11 <= 21:
+#             somma += 11  # L'asso viene trattato come 11
+#         else:
+#             somma += 1  # Se la somma supera 21, trattiamo l'asso come 1
+
+#     return somma
 
 
    
    
     
         
-# print(blackjack_hand_total([2, 3, 5]))
-# print(blackjack_hand_total([11, 5, 5]))
-print(blackjack_hand_total([1, 10, 11]))
+# # print(blackjack_hand_total([2, 3, 5]))
+# # print(blackjack_hand_total([11, 5, 5]))
+# print(blackjack_hand_total([1, 10, 11]))

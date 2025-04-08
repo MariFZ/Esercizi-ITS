@@ -4,35 +4,79 @@
 
 def list_statistics(numbers: list[int]) -> list[int] :
 
-    max_numero:int = numbers[0]
+    massimo = max(numbers)
 
-    min_numero:int = numbers[0]
+    minimo = min(numbers)
 
-    somma:int = 0
-    cont_numeri:int = len(numbers)
+    media = sum(numbers)/len(numbers)
+
+    return massimo, minimo, media
+
+
+print(list_statistics([1, 1, 1, 1, 2]))
+
+def lis_statistics(numbers: list[int]) ->list[int]:
+
+    massimo = numbers[0]
+
+    minimo = numbers[0]
+
+    somma = 0
+    media = 0
+   
+    for number in numbers:
+        if number > massimo:
+            massimo = number
+        
+        elif number < minimo:
+            minimo = number
+
+    for number in numbers:
+        somma += number
+           
+    media = somma/len(somma)
+
+    return massimo, minimo, media 
+
+print(list_statistics([1, 1, 1, 1, 2]))
+
+
+
+
+
+
+
+# def list_statistics(numbers: list[int]) -> list[int] :
+
+#     max_numero:int = numbers[0]
+
+#     min_numero:int = numbers[0]
+
+#     somma:int = 0
+#     cont_numeri:int = len(numbers)
     
-    media:int = 1
+#     media:int = 1
 
-    for numero in numbers:
-        if numero > max_numero:
-            max_numero = numero
+#     for numero in numbers:
+#         if numero > max_numero:
+#             max_numero = numero
             
-            if numero < min_numero:
-                min_numero = numero
+#             if numero < min_numero:
+#                 min_numero = numero
 
-        somma = sum(numbers)
-        media = (somma/cont_numeri)
-
-
-    return max_numero, min_numero, media
+#         somma = sum(numbers)
+#         media = (somma/cont_numeri)
 
 
-# print(list_statistics([1, 2, 3, 4, 5]))
-# print(list_statistics([10, 20, 30, 40, 50]))
+#     return max_numero, min_numero, media
 
-# print(list_statistics([-5, -1, -3]))
 
-print(type(list_statistics([2])))
+# # print(list_statistics([1, 2, 3, 4, 5]))
+# # print(list_statistics([10, 20, 30, 40, 50]))
+
+# # print(list_statistics([-5, -1, -3]))
+
+# print(type(list_statistics([2])))
 
 # print(type(numbers))
 
